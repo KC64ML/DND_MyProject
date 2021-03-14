@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thisteampl.jackpot">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:name=".common.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="Jackpot"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".main.notice.FieldMore"></activity>
+        <activity android:name=".main.notice.Exampleacitivti" />
+
+        <service
+            android:name=".main.fcm.MyJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".main.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.projectController.ProjectModification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.filtering.FilteringSearchResults"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.viewmore.RecentlyProjectViewMore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.floating.ProjectCreation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.projectdetail.ProjectRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.userpage.MyPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.userpage.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.userpage.ProfileChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.filtering.FilteringSearch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.userpage.ProfileEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.userpage.ProfileEditChangeEmojiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.userpage.ProfileEditChangeStateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.projectdetail.ProjectViewDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".main.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakaoad84bb483482dd2c398ebc6794b65db9" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".main.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

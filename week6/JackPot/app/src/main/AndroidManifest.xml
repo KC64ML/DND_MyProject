@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thisteampl.jackpot">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:name=".common.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Jackpot"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".main.floating.ProjectCreation" />
+        <activity android:name=".main.floating.MyAppeal" />
+        <activity android:name=".main.mainhome.SearchViewPage" />
+        <activity android:name=".main.viewmore.RecentlyProjectViewMore" />
+        <activity android:name=".main.mypage.MyPage" />
+        <activity android:name=".main.projectdetail.ProjectViewDetail" />
+        <activity android:name=".main.LoginActivity" />
+        <activity android:name=".main.SignUpActivity" />
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakaoad84bb483482dd2c398ebc6794b65db9" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
